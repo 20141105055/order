@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D173F7181D18C8A400962B79 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D173F7171D18C8A400962B79 /* main.swift */; };
+		D173F7201D18C8FC00962B79 /* File.m in Sources */ = {isa = PBXBuildFile; fileRef = D173F71F1D18C8FC00962B79 /* File.m */; };
+		D173F7231D18C92A00962B79 /* scanf.c in Sources */ = {isa = PBXBuildFile; fileRef = D173F7211D18C92A00962B79 /* scanf.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		D173F7141D18C8A400962B79 /* order */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = order; sourceTree = BUILT_PRODUCTS_DIR; };
 		D173F7171D18C8A400962B79 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		D173F71E1D18C8FB00962B79 /* order-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "order-Bridging-Header.h"; sourceTree = "<group>"; };
+		D173F71F1D18C8FC00962B79 /* File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = File.m; sourceTree = "<group>"; };
+		D173F7211D18C92A00962B79 /* scanf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = scanf.c; sourceTree = "<group>"; };
+		D173F7221D18C92A00962B79 /* scanf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scanf.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				D173F7171D18C8A400962B79 /* main.swift */,
+				D173F71F1D18C8FC00962B79 /* File.m */,
+				D173F71E1D18C8FB00962B79 /* order-Bridging-Header.h */,
+				D173F7211D18C92A00962B79 /* scanf.c */,
+				D173F7221D18C92A00962B79 /* scanf.h */,
 			);
 			path = order;
 			sourceTree = "<group>";
@@ -119,7 +129,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D173F7231D18C92A00962B79 /* scanf.c in Sources */,
 				D173F7181D18C8A400962B79 /* main.swift in Sources */,
+				D173F7201D18C8FC00962B79 /* File.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,14 +223,21 @@
 		D173F71C1D18C8A400962B79 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "order/order-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		D173F71D1D18C8A400962B79 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "order/order-Bridging-Header.h";
 			};
 			name = Release;
 		};
